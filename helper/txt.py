@@ -73,6 +73,6 @@ Example:- /set_caption 📕 File Name: {filename}
 » 𝗛𝗢𝗪 𝗧𝗢 𝗗𝗘𝗣𝗟𝗢𝗬 : <a href=https://youtu.be/GfulqsSnTv4>MoTech Yt</a>
 
 • ❣️ <a href=https://t.me/Spoidermon7>ＺΛＭΛＳＵ</a>
-• ❣️ <a href=https://t.me/Spoidermon7>ＺΛＭΛＳＵ</a>
+• ❣️ <a href=https://www.instagram.com/invites/contact/?i=152wmuaexwcia&utm_content=ndyj4ft>ＺΛＭΛＳＵ</a>
 
 """
