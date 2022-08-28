@@ -90,8 +90,8 @@ async def cb_handler(client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup( [[
                 InlineKeyboardButton("𝙳𝙴𝚅𝚂", callback_data='dev')                
                 ],[
-                InlineKeyboardButton('𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/PYRO_BOTZ'),
-                InlineKeyboardButton('🍂 𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url='https://t.me/PYRO_BOTZ_CHAT')
+                InlineKeyboardButton('𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/Apex_legends_AG'),
+                InlineKeyboardButton('🍂 𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url='https://t.me/Agunivers_backup')
                 ],[
                 InlineKeyboardButton('𝙰𝙱𝙾𝚄𝚃', callback_data='about'),
                 InlineKeyboardButton('𝙷𝙴𝙻𝙿', callback_data='help')
@@ -123,8 +123,8 @@ async def cb_handler(client, query: CallbackQuery):
                ],[
                InlineKeyboardButton("𝘕𝘰𝘰𝘣 𝘥𝘦𝘷𝘦𝘭𝘰𝘱𝘦𝘳", url="https://t.me/Spoidermon12")
                ],[
-               InlineKeyboardButton("🔒 𝙲𝙻𝙾𝚂𝙴", callback_data = "close"),
-               InlineKeyboardButton("◀️ 𝙱𝙰𝙲𝙺", callback_data = "start")
+               InlineKeyboardButton("𝙲𝙻𝙾𝚂𝙴", callback_data = "close"),
+               InlineKeyboardButton("𝙱𝙰𝙲𝙺", callback_data = "start")
                ]]
             )
         )
