@@ -72,7 +72,7 @@ Example:- /set_caption 📕 File Name: {filename}
 » 𝗦𝗢𝗨𝗥𝗖𝗘 𝗖𝗢𝗗𝗘 : <a href=https://t.me/Apex_legends_AG>𝘈𝘗𝘌𝘟-𝘓𝘌𝘎𝘌𝘕𝘋𝘚</a>
 » 𝗛𝗢𝗪 𝗧𝗢 𝗗𝗘𝗣𝗟𝗢𝗬 : <a href=https://youtu.be/GfulqsSnTv4>MoTech Yt</a>
 
-• ❣️ <a href=https://t.me/Spoidermon7>ＺΛＭΛＳＵ</a>
+• ❣️ <a href=https://t.me/Spoidermon12>ＺΛＭΛＳＵ</a>
 • ❣️ <a href=https://www.instagram.com/invites/contact/?i=152wmuaexwcia&utm_content=ndyj4ft>ＺΛＭΛＳＵ</a>
 
 """
