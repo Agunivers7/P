@@ -2,20 +2,22 @@ import re, os
 
 id_pattern = re.compile(r'^.\d+$') 
 
-API_ID = os.environ.get("API_ID", "")
+API_ID = os.environ.get("API_ID", "10651048")
 
-API_HASH = os.environ.get("API_HASH", "")
+API_HASH = os.environ.get("API_HASH", "37775aca7d11f450ecde375baac17fe7")
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "2103300889:AAEVZd_cAFHdJDU-hAYOdYtwALFwACETP2A") 
 
-FORCE_SUB = os.environ.get("FORCE_SUB", None) 
+FORCE_SUB = os.environ.get("FORCE_SUB", "Aguniversmovie") 
 
-DB_NAME = os.environ.get("DB_NAME","")     
+DB_NAME = os.environ.get("DB_NAME","gowtham")     
 
-DB_URL = os.environ.get("DB_URL","")
+DB_URL = os.environ.get("DB_URL","mongodb+srv://Aadhi:42426840@cluster0.h9rky.mongodb.net/?retryWrites=true&w=majority")
  
+DATABASE_URL = os.environ.get("DATABASE_URL", "postgres://jvxgctfh:1Jf49IZA-vGumNNojNaLeOHCnMC6yfRn@tyke.db.elephantsql.com/jvxgctfh") 
+
 FLOOD = int(os.environ.get("FLOOD", "10"))
 
 START_PIC = os.environ.get("START_PIC", "https://graph.org/file/e7aba0e06227ffd054728.jpg")
 
-ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
+ADMIN = os.environ.get("ADMIN", "1323557247") 
