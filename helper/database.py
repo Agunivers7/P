@@ -1,7 +1,7 @@
 import pymongo 
 import os
 
-DB_NAME = os.environ.get("DB_NAME","gowtham")
+DB_NAME = os.environ.get("DB_NAME","xxxtrntasisns")
 DB_URL = os.environ.get("DB_URL","mongodb+srv://Aadhi:42426840@cluster0.h9rky.mongodb.net/?retryWrites=true&w=majority")
 mongo = pymongo.MongoClient(DB_URL)
 db = mongo[DB_NAME]
