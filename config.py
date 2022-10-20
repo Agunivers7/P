@@ -1,7 +1,7 @@
 import re, os
 
 id_pattern = re.compile(r'^.\d+$')
-def is_enabled(value, default):
+defd2, default):
     if value.lower() in ["true", "yes", "1", "enable", "y"]:
         return True
     elif value.lower() in ["false", "no", "0", "disable", "n"]:
@@ -11,8 +11,10 @@ def is_enabled(value, default):
 
 # Bot information
 API_ID = 10651048
-API_HASH = environ.get('API_HASH', '37775aca7d11f450ecde375baac17fe7')
-BOT_TOKEN = environ.get('BOT_TOKEN', '5473562541:AAGiYVUx1fNiXLs_KiTKoH9pJ0fAhYXUhK0')
+
+API_HASH = os.environ.get("API_HASH", "37775aca7d11f450ecde375baac17fe7")
+
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "5473562541:AAGiYVUx1fNiXLs_KiTKoH9pJ0fAhYXUhK0") 
 
 FORCE_SUB = os.environ.get("FORCE_SUB", "Aguniversmovie") 
 
