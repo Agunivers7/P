@@ -16,7 +16,7 @@ DB_NAME = os.environ.get("DB_NAME","gowtham")
 
 DB_URL = os.environ.get("DB_URL","mongodb+srv://Aadhi:42426840@cluster0.h9rky.mongodb.net/?retryWrites=true&w=majority")
  
-DATABASE_URL = os.environ.get("DATABASE_URL", "postgres://aadhi:aadhi@8.219.192.42:5432/aadhidb") 
+DATABASE_URL = os.environ.get("DATABASE_URL", "postgres://zlhdbjah:9hhelgbtO1L94HWzHQmy-QlS1J-VVaTR@lucky.db.elephantsql.com/zlhdbjah") 
 
 FLOOD = int(os.environ.get("FLOOD", "10"))
 
