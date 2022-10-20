@@ -8,7 +8,7 @@ API_ID = 10651048
 
 API_HASH = os.environ.get("API_HASH", "37775aca7d11f450ecde375baac17fe7")
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "5473562541:AAGiYVUx1fNiXLs_KiTKoH9pJ0fAhYXUhK0") 
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "5743481582:AAE54d0xnry2lX80YbaoEPQ4RM20Q73qDkU") 
 
 FORCE_SUB = os.environ.get("FORCE_SUB", "Aguniversmovie") 
 
