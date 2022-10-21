@@ -8,11 +8,11 @@ API_ID = 10651048
 
 API_HASH = os.environ.get("API_HASH", "37775aca7d11f450ecde375baac17fe7")
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "5743481582:AAE54d0xnry2lX80YbaoEPQ4RM20Q73qDkU") 
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "5694266322:AAFuhovA-kFby3QNJjTlGUttDxWtYUNdYuA") 
 
 FORCE_SUB = os.environ.get("FORCE_SUB", "Aguniversmovie") 
 
-DB_NAME = os.environ.get("DB_NAME","xxxtrntasisns")     
+DB_NAME = os.environ.get("DB_NAME","xxasisns")     
 
 DB_URL = os.environ.get("DB_URL","mongodb+srv://Aadhi:42426840@cluster0.jqzpafx.mongodb.net/?retryWrites=true&w=majority")
  
