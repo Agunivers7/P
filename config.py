@@ -12,7 +12,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", "5694266322:AAFuhovA-kFby3QNJjTlGUttDxWt
 
 FORCE_SUB = os.environ.get("FORCE_SUB", "Aguniversmovie") 
 
-DB_NAME = os.environ.get("DB_NAME","xxasisns")     
+DB_NAME = os.environ.get("DB_NAME","qwerty")     
 
 DB_URL = os.environ.get("DB_URL","mongodb+srv://Aadhi:42426840@cluster0.jqzpafx.mongodb.net/?retryWrites=true&w=majority")
  
