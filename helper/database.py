@@ -1,49 +1,66 @@
-import pymongo 
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker, scoped_session
+
 import os
 
-DB_NAME = os.environ.get("DB_NAME","qwerty")
-DB_URL = os.environ.get("DB_URL","mongodb+srv://Aadhi:42426840@cluster0.jqzpafx.mongodb.net/?retryWrites=true&w=majority")
-mongo = pymongo.MongoClient(DB_URL)
-db = mongo[DB_NAME]
-dbcol = db["user"]
+import threading
+import asyncio
 
-def insert(chat_id):
-    user_id = int(chat_id)
-    user_det = {"_id": user_id,"file_id": None, "caption": None}
+from sqlalchemy import Column, Integer, Boolean, String, ForeignKey, UniqueConstraint, func
+
+
+if bool(os.environ.get("WEBHOOK", False)):
+    from sample_config import Config
+else:
+    from config import Config
+
+
+def start() -> scoped_session:
+    engine = create_engine(Config.DB_URI, client_encoding="utf8")
+    BASE.metadata.bind = engine
+    BASE.metadata.create_all(engine)
+    return scoped_session(sessionmaker(bind=engine, autoflush=False))
+
+
+BASE = declarative_base()
+SESSION = start()
+
+INSERTION_LOCK = threading.RLock()
+
+class Thumbnail(BASE):
+    __tablename__ = "thumbnail"
+    id = Column(Integer, primary_key=True)
+    msg_id = Column(Integer)
+    
+    def __init__(self, id, msg_id):
+        self.id = id
+        self.msg_id = msg_id
+
+Thumbnail.__table__.create(checkfirst=True)
+
+async def df_thumb(id, msg_id):
+    with INSERTION_LOCK:
+        msg = SESSION.query(Thumbnail).get(id)
+        if not msg:
+            msg = Thumbnail(id, msg_id)
+            SESSION.add(msg)
+            SESSION.flush()
+        else:
+            SESSION.delete(msg)
+            file = Thumbnail(id, msg_id)
+            SESSION.add(file)
+        SESSION.commit()
+
+async def del_thumb(id):
+    with INSERTION_LOCK:
+        msg = SESSION.query(Thumbnail).get(id)
+        SESSION.delete(msg)
+        SESSION.commit()
+
+async def thumb(id):
     try:
-      dbcol.insert_one(user_det)
-    except:
-      pass
-
-def addthumb(chat_id, file_id):
-    dbcol.update_one({"_id": chat_id},{"$set":{"file_id": file_id}})
-	
-def delthumb(chat_id): 
-    dbcol.update_one({"_id": chat_id},{"$set":{"file_id": None}})
-
-def addcaption(chat_id, caption):
-    dbcol.update_one({"_id": chat_id},{"$set":{"caption": caption}})
-	
-def delcaption(chat_id): 
-    dbcol.update_one({"_id": chat_id},{"$set":{"caption": None}})
-
-def find(chat_id):
-    id =  {"_id":chat_id}
-    x = dbcol.find(id)
-    for i in x:
-         thumb = i["file_id"]
-         caption = i["caption"]
-         return [thumb, caption]
-
-def getid():
-    values = []
-    for key  in dbcol.find():
-         id = key["_id"]
-         values.append((id)) 
-    return values
-
-
-
-
-
-
+        t = SESSION.query(Thumbnail).get(id)
+        return t
+    finally:
+        SESSION.close()
