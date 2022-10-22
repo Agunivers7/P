@@ -6,3 +6,4 @@ pyrogram==2.0.35
 TgCrypto
 pymongo
 dnspython
+sqlalchemy==1.3.23
