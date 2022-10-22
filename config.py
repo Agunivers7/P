@@ -22,4 +22,4 @@ START_PIC = os.environ.get("START_PIC", "https://telegra.ph/file/a6fe48dd57f2a7f
 
 ADMIN = os.environ.get("ADMIN", "1323557247") 
 
-DATABASE_URL = os.environ.get("DATABASE_URL", "postgres://ihgmjbqi:Tx3okQ2JOQsW2iA4Pxiap71rk7viDi0n@lucky.db.elephantsql.com/ihgmjbqi") 
+ 
