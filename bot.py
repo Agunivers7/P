@@ -2,6 +2,12 @@ import logging
 import logging.config
 from pyrogram import Client 
 from config import API_ID, API_HASH,BOT_TOKEN, FORCE_SUB, NAME
+  
+import os
+
+if bool(os.environ.get("WEBHOOK", False)):
+    from config import Config
+
 
 logging.config.fileConfig("logging.conf")
 logging.getLogger().setLevel(logging.INFO)
@@ -12,9 +18,9 @@ class Bot(Client):
     def __init__(self):
         super().__init__(
             name=NAME, 
-            api_id=API_ID,
-            api_hash=API_HASH,
-            bot_token=BOT_TOKEN,
+            bot_token=Config.TG_BOT_TOKEN,
+            api_id=Config.APP_ID,
+            api_hash=Config.API_HASH,
             workers=50,
             plugins={"root": "plugins"},
             sleep_threshold=5,
