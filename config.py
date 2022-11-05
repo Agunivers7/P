@@ -1,6 +1,6 @@
 import re, os
 
-id_pattern = re.compile(r'^.\d+$')
+class Config(object):
 
 
 # Bot information
