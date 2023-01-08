@@ -7,3 +7,6 @@ TgCrypto
 pymongo
 dnspython
 sqlalchemy==1.3.23
+Flask==2.2.2
+gunicorn==20.1.0
+aiohttp==3.8.1
